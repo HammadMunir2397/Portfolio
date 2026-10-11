@@ -1,0 +1,23 @@
+/* Clean Light theme (applied via data-theme="light" on <html>) */
+
+/* 1. Clean Light */
+[data-theme="light"] {
+    --dark-bg: #faf7f2; --bg-rgb: 250, 247, 242;
+    --dark-card: #ffffff; --card-rgb: 255, 255, 255; --card-2: #f3efe8;
+    --text-primary: #1b1b2f; --text-secondary: #3f3f5a; --text-muted: #6b6b80;
+    --primary-color: #4f46e5; --primary-rgb: 79, 70, 229;
+    --pink: #f97362; --pink-rgb: 249, 115, 98; --secondary-color: #f97362;
+    --violet-rgb: 20, 184, 166; --accent-color: #d97706;
+    --border: rgba(27, 27, 47, 0.09); --on-primary: #ffffff;
+    --gradient: linear-gradient(120deg, #4f46e5 0%, #9333ea 50%, #f97362 100%);
+    --shadow: 0 10px 30px rgba(27, 27, 47, 0.08);
+    --shadow-hover: 0 24px 50px rgba(79, 70, 229, 0.16);
+    --blob1: #c7d2fe; --blob2: #fecdd3; --blob3: #99f6e4; --blob-opacity: 0.7;
+    --grid-line: rgba(27, 27, 47, 0.04);
+    --tint-2: #d9483a; --tint-3: #0f8f80; --code-bg: #1b1b2f;
+}
+[data-theme="light"] .skill-icon i { color: var(--primary-color); }
+[data-theme="light"] .btn-secondary, [data-theme="light"] .hero-tech span { background: #ffffff; }
+[data-theme="light"] .shot { border-color: rgba(27, 27, 47, 0.08); box-shadow: 0 30px 60px rgba(27, 27, 47, 0.18); }
+[data-theme="light"] .modal-content .close-btn { color: var(--text-primary); }
+

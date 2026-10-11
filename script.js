@@ -458,3 +458,57 @@ document.querySelectorAll('.project-card').forEach(card => {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
     });
 });
+
+// ===== Typing animation for the code snippet =====
+const codeEl = document.querySelector('.code-snippet code');
+if (codeEl) {
+    // Split the highlighted code into [className, text] segments
+    const segments = [];
+    codeEl.childNodes.forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) segments.push(['', node.textContent]);
+        else segments.push([node.className, node.textContent]);
+    });
+    for (let i = segments.length - 1; i >= 0; i--) if (!segments[i][1]) segments.splice(i, 1);
+
+    const pre = codeEl.parentElement;
+    const caret = document.createElement('span');
+    caret.className = 'caret';
+
+    const typeCode = () => {
+        pre.style.minHeight = `${pre.offsetHeight}px`; // keep the card from jumping
+        codeEl.textContent = '';
+        codeEl.appendChild(caret);
+
+        let seg = 0, ch = 0, current = null;
+        const step = () => {
+            if (seg >= segments.length) {
+                setTimeout(typeCode, 4000); // pause, then type again
+                return;
+            }
+            const [cls, text] = segments[seg];
+            if (ch === 0) {
+                current = cls ? document.createElement('span') : document.createTextNode('');
+                if (cls) current.className = cls;
+                codeEl.insertBefore(current, caret);
+            }
+            current.textContent += text[ch];
+            ch++;
+            if (ch >= text.length) { seg++; ch = 0; }
+            const delay = text[ch - 1] === '\n' ? 120 : 28 + Math.random() * 40;
+            setTimeout(step, delay);
+        };
+        step();
+    };
+
+    if (reduceMotion) {
+        codeEl.appendChild(caret);
+    } else {
+        const codeObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                typeCode();
+                codeObserver.disconnect();
+            }
+        }, { threshold: 0.4 });
+        codeObserver.observe(pre);
+    }
+}

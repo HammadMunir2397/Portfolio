@@ -78,90 +78,60 @@ const modalBody = document.getElementById('modal-body');
 // Project data - You can customize this with your actual project details
 const projects = {
     project1: {
-        title: 'Cyera Endless Webgl',
-        description: 'Cyera Endless is a browser-based endless runner game developed for the WebGL platform. The game combines smooth, fast-paced gameplay with modern features that enhance player engagement and competitiveness.',
+        title: 'Sequence Samba',
+        description: 'A cross-platform 2D puzzle game for iOS and Android with multiple game modes, progressive difficulty and a real-time database backend.',
         features: [
-            'Endless Runner Mechanics – Players run continuously, avoiding obstacles and aiming for the highest score.',
-            'User Authentication – Secure login and signup system with email integration for personalized progress tracking',
-            'Leaderboard System – Global leaderboard where players can compete for top rankings.',
-            'Daily Missions – Rotating challenges that encourage players to return daily and earn rewards.',
-            'In-Game Shop – A fully functional shop where players can purchase skins and upgrades using in-game currency.'
+            'Multiple puzzle game modes with progressive difficulty levels',
+            'Facebook, Google, Apple and Guest login',
+            'Leaderboard to track and display player rankings',
+            'Rewarded and interstitial ads for monetization',
+            'Player data, progress and cloud synchronization'
         ],
-        technologies: ['Unity', 'C#', 'Firebase', 'Web', 'User-Authentication'],
-        // Thumbnail image for project card (URL or local path like 'images/project1-thumb.jpg')
-        thumbnail: 'images/image3.png',
-        // Screenshots for modal (can be URLs or local paths like 'images/project1-screenshot1.jpg')
-        images: [
-            //'https://via.placeholder.com/800x450/6366f1/ffffff?text=Game+Screenshot+1',
-            //'https://via.placeholder.com/800x450/6366f1/ffffff?text=Game+Screenshot+2'
-            // 'images/Cyera.png'
-            // OR use local images: 'images/cyera-screenshot1.jpg', 'images/cyera-screenshot2.jpg'
-        ],
-        // Video: YouTube URL or local path like 'videos/WebGame.mp4'
-        videoUrl: 'videos/WebGame.mp4',
-        //  github: '#',
-        //  demo: '#'
+        technologies: ['Unity', 'C#', 'Firebase', 'AdMob', 'Android', 'iOS'],
+        // Screenshots for the modal (local paths like 'images/samba-1.png' or URLs)
+        images: [],
+        // Video: YouTube embed URL or local path like 'videos/Samba.mp4'
+        videoUrl: 'videos/Samba.mp4'
     },
     project2: {
-        title: 'Reel Adventure',
-        description: 'An innovative auto-battler game designed for PC platforms. Features unique mechanics and engaging stats system.',
+        title: 'Cyera Endless',
+        description: 'A browser-based endless runner built for WebGL, combining smooth, fast-paced gameplay with features that keep players competing and coming back.',
         features: [
-            'Intuitive controls',
-            'Over endless challenging levels',
-            'Beautiful 2D art style',
-            'Achievement system',
-            'Player Inventory System',
+            'Endless runner mechanics: avoid obstacles and chase the highest score',
+            'User authentication with email login and signup for personal progress',
+            'Global leaderboard where players compete for top rankings',
+            'Daily missions that reward players for returning',
+            'In-game shop for skins and upgrades using in-game currency',
+            'Optimized for smooth performance in web browsers'
         ],
-        technologies: ['Unity', 'C#', '2D Animation', 'PC', 'Stream Leaderboard'],
-        thumbnail: 'images/Reel.png',
-        // OR use local: thumbnail: 'images/project2-thumb.jpg',
-        images: [
-            // 'https://via.placeholder.com/800x450/8b5cf6/ffffff?text=Game+Screenshot+1',
-            // 'https://via.placeholder.com/800x450/8b5cf6/ffffff?text=Game+Screenshot+2'
-            //'images/Reel.png'
-        ],
-        //videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-        videoUrl: 'videos/Reel Adventure.mp4',
-        //  github: '#',
-        //  demo: '#'
+        technologies: ['Unity', 'C#', 'Firebase', 'WebGL', 'Authentication'],
+        images: [],
+        videoUrl: 'videos/WebGame.mp4'
     },
     project3: {
-        title: 'Sequence Samba',
-        description: 'A fast-paced 2D puzzle game. Supports different types of authentication systems and various game modes with real-time database.',
+        title: 'Reel Adventure',
+        description: 'A 2D auto-battler for PC with a stat-driven combat system, built on a scalable, maintainable architecture using SOLID principles and event-driven systems.',
         features: [
-            'Real-time database',
-            'Multiple puzzle game modes',
-            'Authentications system',
-            'Leaderboard integration'
+            'Auto-battle system where attacks are decided by player stats',
+            'Endless, increasingly challenging levels',
+            'Player inventory and achievement systems',
+            'Event-driven, modular codebase that is easy to extend'
         ],
-        technologies: ['Unity', 'C#', 'Firebase'],
-        thumbnail: 'images/samba.png',
-        images: [
-            //'https://via.placeholder.com/800x450/ec4899/ffffff?text=Game+Screenshot+1',
-            //'https://via.placeholder.com/800x450/ec4899/ffffff?text=Game+Screenshot+2'
-        ],
-        videoUrl: 'videos/Samba.mp4'   //'https://www.youtube.com/embed/dQw4w9WgXcQ',
-        // github: '#',
-        // demo: '#'
+        technologies: ['Unity', 'C#', '2D Animation', 'PC', 'Steam Leaderboard'],
+        images: [],
+        videoUrl: 'videos/Reel Adventure.mp4'
     },
     project4: {
         title: 'Save America',
-        description: 'An immersive 3D game experience designed for Android user. Features realistic interactions and engaging gameplay.',
+        description: 'An immersive 3D game for Android with realistic interactions and engaging gameplay.',
         features: [
-            'Realistic physics interactions',
+            'Realistic physics-based interactions',
             'Immersive 3D audio',
-            'Comfortable locomotion system'
+            'Smooth, comfortable player movement'
         ],
-        technologies: ['Unity', 'C#', 'Firebase',],
-        //thumbnail: 'images/saveAmerica.jpg',
-        images: [
-            //'https://via.placeholder.com/800x450/14b8a6/ffffff?text=Game+Screenshot+1',
-            //'https://via.placeholder.com/800x450/14b8a6/ffffff?text=Game+Screenshot+2'
-            //'images/saveAmerica.jpg'
-        ],
-        videoUrl: 'videos/Save America.mp4',
-        // github: '#',
-        //  demo: '#'
+        technologies: ['Unity', 'C#', '3D', 'Android', 'Firebase'],
+        images: [],
+        videoUrl: 'videos/Save America.mp4'
     }
 };
 
@@ -207,7 +177,7 @@ function openModal(projectId) {
     }
 
     modalBody.innerHTML = `
-        <h2 style="font-size: 2.5rem; margin-bottom: 1rem; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+        <h2 style="font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 1rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
             ${project.title}
         </h2>
         <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8;">
@@ -216,7 +186,7 @@ function openModal(projectId) {
         
         ${videoHTML}
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 1rem; margin-bottom: 2rem;">
             ${project.images.map(img => `
                 <img src="${img}" alt="${project.title}" 
                      style="width: 100%; border-radius: 15px; height: 200px; object-fit: cover;">
@@ -239,7 +209,7 @@ function openModal(projectId) {
             <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Technologies Used</h3>
             <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
                 ${project.technologies.map(tech => `
-                    <span style="padding: 0.5rem 1rem; background: rgba(99, 102, 241, 0.2); color: var(--primary-color); border-radius: 20px;">
+                    <span style="padding: 0.5rem 1rem; background: rgba(var(--primary-rgb), 0.15); color: var(--primary-color); border-radius: 20px;">
                         ${tech}
                     </span>
                 `).join('')}
@@ -253,6 +223,7 @@ function openModal(projectId) {
 
 function closeModal() {
     modal.style.display = 'none';
+    modalBody.innerHTML = ''; // stops any video that is still playing
     document.body.style.overflow = 'auto';
 }
 
@@ -380,7 +351,6 @@ window.addEventListener('scroll', () => {
             navLinks.forEach(link => link.classList.remove('active'));
             if (navLink) {
                 navLink.classList.add('active');
-                navLink.style.color = 'var(--text-primary)';
             }
         }
     });
@@ -419,11 +389,10 @@ fadeElements.forEach(el => {
     fadeObserver.observe(el);
 });
 
-// ===== Counter Animation for Stats (if you want to add them) =====
-function animateCounter(element, target, duration = 2000) {
-    const start = 0;
+// ===== Counter Animation for Stats =====
+function animateCounter(element, target, suffix = '', duration = 1500) {
     const increment = target / (duration / 16);
-    let current = start;
+    let current = 0;
 
     const timer = setInterval(() => {
         current += increment;
@@ -431,9 +400,25 @@ function animateCounter(element, target, duration = 2000) {
             current = target;
             clearInterval(timer);
         }
-        element.textContent = Math.floor(current);
+        element.textContent = Math.floor(current) + suffix;
     }, 16);
 }
+
+const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            animateCounter(el, Number(el.dataset.target), el.dataset.suffix || '');
+            statObserver.unobserve(el);
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
+
+// ===== Footer Year =====
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ===== Preloader (optional) =====
 window.addEventListener('load', () => {

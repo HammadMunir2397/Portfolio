@@ -24,11 +24,7 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
-    if (currentScroll <= 0) {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
-    } else {
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.5)';
-    }
+    navbar.classList.toggle('scrolled', currentScroll > 20);
 
     lastScroll = currentScroll;
 });
@@ -64,7 +60,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections and cards
-document.querySelectorAll('section, .skill-card, .project-card, .contact-item').forEach(el => {
+document.querySelectorAll('section:not(.hero), .skill-card, .project-card, .timeline-item, .stat').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'all 0.6s ease';
@@ -356,24 +352,8 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ===== Parallax Effect for Hero Section =====
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroContent = document.querySelector('.hero-content');
-    const heroImage = document.querySelector('.hero-image');
-
-    if (heroContent && scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
-        heroContent.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
-    }
-
-    if (heroImage && scrolled < window.innerHeight) {
-        heroImage.style.transform = `translateY(${scrolled * -0.2}px)`;
-    }
-});
-
 // ===== Add animation classes when elements are visible =====
-const fadeElements = document.querySelectorAll('.skill-card, .project-card');
+const fadeElements = document.querySelectorAll('.skill-card, .project-card, .timeline-item, .stat');
 const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
         if (entry.isIntersecting) {

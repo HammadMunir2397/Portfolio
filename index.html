@@ -4,34 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hammad Munir - Senior Unity Developer</title>
-    <meta name="description" content="Hammad Munir - Senior Unity Developer with 5+ years building mobile, WebGL and PC games and HTML5 playable ads (Luna) for titles with 110M+ downloads.">
+    <meta name="description" content="Hammad Munir - Senior Unity Developer with 5+ years building mobile, WebGL and PC games: gameplay systems, clean C# architecture, monetization and performance.">
     <meta property="og:title" content="Hammad Munir - Senior Unity Developer">
-    <meta property="og:description" content="Unity games and Luna playable ads for Unity Ads, AppLovin, Mintegral and Google.">
+    <meta property="og:description" content="Unity games for Android, iOS, WebGL and PC, from prototype to release.">
     <meta property="og:image" content="images/Samba.png">
     <meta name="theme-color" content="#070b14">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23070b14'/><text x='50' y='66' font-size='46' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2322d3ee'>HM</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="bg-decor" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <span class="logo-text">HM</span>
-            </div>
+            <a href="#home" class="logo"><span class="logo-text">HM</span><span class="logo-dot">.</span></a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Work</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#playables" class="nav-link">Playable Ads</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Hire Me</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -39,361 +42,274 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <span class="hero-badge"><i class="fas fa-circle"></i> Available for freelance projects</span>
                 <h1 class="hero-title">
-                    Hi, I'm <span class="gradient-text">Hammad Munir</span>
+                    I build Unity games<br>that <span class="gradient-text">players love</span>.
                 </h1>
-                <h2 class="hero-subtitle">Senior Unity Developer</h2>
                 <p class="hero-description">
-                    I build games and HTML5 playable ads that ship. 5+ years of turning ideas into
-                    polished mobile, WebGL and PC experiences, including playables for titles with
-                    <strong>110M+ downloads</strong>.
+                    Hi, I'm <strong>Hammad Munir</strong>, a <span class="hero-subtitle">Senior Unity Developer</span>
+                    with 5+ years of turning ideas into polished games for mobile, WebGL and PC.
+                    Clean architecture, smooth performance, shipped on time.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-gamepad"></i> See My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Talk</a>
                 </div>
-                <div class="social-links">
-                    <a href="mailto:hammadmunir979@gmail.com" class="social-link" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/hammad-munir-a84096164/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/HammadMunir2397" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
+                <div class="hero-tech">
+                    <span><i class="fab fa-unity"></i> Unity</span>
+                    <span>C#</span>
+                    <span>Android</span>
+                    <span>iOS</span>
+                    <span>WebGL</span>
+                    <span>PC</span>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="floating-card">
-                    <i class="fab fa-unity"></i>
-                </div>
+
+            <div class="hero-showcase" aria-hidden="true">
+                <div class="shot shot-1"><img src="images/Samba.png" alt=""></div>
+                <div class="shot shot-2"><img src="images/Cyera.png" alt=""></div>
+                <div class="shot shot-3"><img src="images/Reel.png" alt=""></div>
+                <div class="floating-chip chip-a"><i class="fab fa-unity"></i> Unity 6</div>
+                <div class="floating-chip chip-b"><i class="fas fa-bolt"></i> 60 FPS</div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse"></div>
         </div>
     </section>
 
-    <!-- Stats Strip -->
+    <!-- Tech marquee -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Unity</span><span>C#</span><span>Firebase</span><span>AdMob</span><span>Unity IAP</span><span>Zenject</span><span>REST APIs</span><span>WebGL</span><span>Android</span><span>iOS</span><span>Luna Playground</span><span>Git</span>
+            <span>Unity</span><span>C#</span><span>Firebase</span><span>AdMob</span><span>Unity IAP</span><span>Zenject</span><span>REST APIs</span><span>WebGL</span><span>Android</span><span>iOS</span><span>Luna Playground</span><span>Git</span>
+        </div>
+    </div>
+
+    <!-- Stats -->
     <section class="stats" aria-label="Highlights">
         <div class="container stats-grid">
-            <div class="stat"><span class="stat-number" data-target="5" data-suffix="+">5+</span><span class="stat-label">Years of Experience</span></div>
-            <div class="stat"><span class="stat-number" data-target="110" data-suffix="M+">110M+</span><span class="stat-label">Downloads of Titles I've Built Playables For</span></div>
-            <div class="stat"><span class="stat-number" data-target="4" data-suffix="">4</span><span class="stat-label">Ad Networks Delivered To</span></div>
-            <div class="stat"><span class="stat-number" data-target="4" data-suffix="">4</span><span class="stat-label">Platforms: Android, iOS, WebGL, PC</span></div>
+            <div class="stat"><span class="stat-number" data-target="5" data-suffix="+">5+</span><span class="stat-label">Years building games</span></div>
+            <div class="stat"><span class="stat-number" data-target="4" data-suffix="">4</span><span class="stat-label">Platforms shipped to</span></div>
+            <div class="stat"><span class="stat-number" data-target="110" data-suffix="M+">110M+</span><span class="stat-label">Downloads of titles I've worked on</span></div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-description">
-                        I'm a Senior Unity Developer based in Lahore, Pakistan, with 5+ years of experience
-                        delivering client games and playable ads in a services-based environment. I've worked across
-                        puzzle, strategy, runner and casual genres, taking projects from client requirements and rapid
-                        prototypes to store-ready releases.
-                    </p>
-                    <p class="about-description">
-                        I write clean, scalable C# (SOLID, design patterns, Zenject), optimize for smooth performance on
-                        low-end devices and browsers, and integrate everything a live game needs: Firebase, AdMob, in-app
-                        purchases, REST APIs, social login, leaderboards and cloud save.
-                    </p>
-                    <div class="about-info">
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Lahore, Pakistan</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>BS Software Engineering, Lahore Garrison University</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-briefcase"></i>
-                            <span>Software Engineer (Unity) at Geni-Team Solutions</span>
-                        </div>
-                    </div>
-                    <a href="Resume/Hammad_Munir_Resume.pdf" download class="btn btn-primary">
-                        <i class="fas fa-download"></i> Download Resume
-                    </a>
-                </div>
-                <div class="about-image">
-                    <div class="profile-card">
-                        <div class="profile-icon">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills &amp; Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-unity"></i>
-                    </div>
-                    <h3>Unity Development</h3>
-                    <p>2D &amp; 3D gameplay programming, UI/UX systems, animation and rapid prototyping.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3>Playable Ads</h3>
-                    <p>HTML5 playables with Luna Playground for Unity Ads, AppLovin, Mintegral and Google.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>C# &amp; Architecture</h3>
-                    <p>Clean, scalable code with SOLID principles, design patterns and Zenject dependency injection.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Cross-Platform</h3>
-                    <p>Shipping builds for Android, iOS, WebGL and PC.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-coins"></i>
-                    </div>
-                    <h3>Monetization &amp; Backend</h3>
-                    <p>AdMob, in-app purchases, Firebase, REST APIs, social login, leaderboards and cloud save.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3>Performance</h3>
-                    <p>Profiling and optimization for smooth gameplay on low-end devices and web browsers.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Playable Ads Section -->
-    <section id="playables" class="playables">
-        <div class="container">
-            <h2 class="section-title">Playable Ads</h2>
-            <p class="section-subtitle">HTML5 playables built with Luna Playground for Unity Ads, AppLovin, Mintegral and Google</p>
-
-            <div class="network-badges">
-                <span class="network">Unity Ads</span>
-                <span class="network">AppLovin</span>
-                <span class="network">Mintegral</span>
-                <span class="network">Google Ads</span>
-            </div>
-
-            <div class="playables-grid">
-                <a class="playable-card" href="https://play.google.com/store/apps/details?id=com.zakg.scaryteacher.hellgame" target="_blank" rel="noopener">
-                    <img src="images/playables/scary-teacher-3d.png" alt="Scary Teacher 3D icon" loading="lazy">
-                    <div>
-                        <h3>Scary Teacher 3D</h3>
-                        <p class="downloads"><i class="fas fa-download"></i> 100M+ downloads</p>
-                        <p class="store-link"><i class="fab fa-google-play"></i> View on Google Play</p>
-                    </div>
-                </a>
-                <a class="playable-card" href="https://play.google.com/store/apps/details?id=com.idle.home.design.makeover" target="_blank" rel="noopener">
-                    <img src="images/playables/idle-home-makeover.png" alt="Idle Home Makeover icon" loading="lazy">
-                    <div>
-                        <h3>Idle Home Makeover</h3>
-                        <p class="downloads"><i class="fas fa-download"></i> 10M+ downloads</p>
-                        <p class="store-link"><i class="fab fa-google-play"></i> View on Google Play</p>
-                    </div>
-                </a>
-                <a class="playable-card" href="https://play.google.com/store/apps/details?id=com.genigames.going.up.cat.runner" target="_blank" rel="noopener">
-                    <img src="images/playables/going-up-cat-runner.png" alt="Going Up Cat Runner 3D icon" loading="lazy">
-                    <div>
-                        <h3>Going Up Cat Runner 3D</h3>
-                        <p class="downloads"><i class="fas fa-download"></i> 500K+ downloads</p>
-                        <p class="store-link"><i class="fab fa-google-play"></i> View on Google Play</p>
-                    </div>
-                </a>
-                <a class="playable-card" href="https://play.google.com/store/apps/details?id=com.genigames.infinite.glide.rush" target="_blank" rel="noopener">
-                    <img src="images/playables/infinite-glide.png" alt="Infinite Glide: Board Rush icon" loading="lazy">
-                    <div>
-                        <h3>Infinite Glide: Board Rush</h3>
-                        <p class="downloads"><i class="fas fa-bolt"></i> Hyper-casual runner</p>
-                        <p class="store-link"><i class="fab fa-google-play"></i> View on Google Play</p>
-                    </div>
-                </a>
-            </div>
-
-            <ul class="playable-points">
-                <li><i class="fas fa-check-circle"></i> Core gameplay turned into short, focused loops with end cards and install CTAs</li>
-                <li><i class="fas fa-check-circle"></i> Optimized textures, audio and code to fit strict ad-network file-size limits</li>
-                <li><i class="fas fa-check-circle"></i> Smooth performance in mobile browsers, delivered per each network's specs</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Games I've built with Unity. Tap a project for video and details.</p>
+            <p class="eyebrow">Selected Work</p>
+            <h2 class="section-title">Games I've Built</h2>
+            <p class="section-subtitle">Tap any project to watch gameplay and see what went into it.</p>
 
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card" onclick="openModal('project1')">
                     <div class="project-image">
                         <img src="images/Samba.png" alt="Sequence Samba" loading="lazy">
-                        <div class="project-overlay">
-                            <button class="view-btn">
-                                <i class="fas fa-play"></i> View Details
-                            </button>
-                        </div>
+                        <span class="play-btn"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="project-info">
+                        <span class="project-kind">Puzzle · iOS &amp; Android</span>
                         <h3>Sequence Samba</h3>
                         <p>Cross-platform puzzle game with multiple modes, social login, leaderboards, ads and cloud save.</p>
                         <div class="project-tags">
                             <span class="tag">Unity</span>
                             <span class="tag">Firebase</span>
+                            <span class="tag">AdMob</span>
                             <span class="tag">Leaderboard</span>
-                            <span class="tag">2D</span>
-                            <span class="tag">Android</span>
-                            <span class="tag">iOS</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="project-card" onclick="openModal('project2')">
                     <div class="project-image">
                         <img src="images/Cyera.png" alt="Cyera Endless" loading="lazy">
-                        <div class="project-overlay">
-                            <button class="view-btn">
-                                <i class="fas fa-play"></i> View Details
-                            </button>
-                        </div>
+                        <span class="play-btn"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="project-info">
+                        <span class="project-kind">Endless Runner · WebGL</span>
                         <h3>Cyera Endless</h3>
-                        <p>Browser-based endless runner with user authentication, leaderboard, daily missions and an in-game shop.</p>
+                        <p>Browser runner with authentication, leaderboard, daily missions and an in-game shop.</p>
                         <div class="project-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">C#</span>
-                            <span class="tag">3D</span>
                             <span class="tag">WebGL</span>
+                            <span class="tag">3D</span>
                             <span class="tag">Firebase</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
                 <div class="project-card" onclick="openModal('project3')">
                     <div class="project-image">
                         <img src="images/Reel.png" alt="Reel Adventure" loading="lazy">
-                        <div class="project-overlay">
-                            <button class="view-btn">
-                                <i class="fas fa-play"></i> View Details
-                            </button>
-                        </div>
+                        <span class="play-btn"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="project-info">
+                        <span class="project-kind">Auto-Battler · PC</span>
                         <h3>Reel Adventure</h3>
-                        <p>2D auto-battler for PC with a stat-driven combat system, built on a SOLID, event-driven architecture.</p>
+                        <p>Stat-driven auto-battle combat on a SOLID, event-driven architecture.</p>
                         <div class="project-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">C#</span>
                             <span class="tag">2D</span>
                             <span class="tag">PC</span>
+                            <span class="tag">Architecture</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
                 <div class="project-card" onclick="openModal('project4')">
                     <div class="project-image">
                         <img src="images/saveAmerica.png" alt="Save America" loading="lazy">
-                        <div class="project-overlay">
-                            <button class="view-btn">
-                                <i class="fas fa-play"></i> View Details
-                            </button>
-                        </div>
+                        <span class="play-btn"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="project-info">
+                        <span class="project-kind">3D Action · Android</span>
                         <h3>Save America</h3>
-                        <p>3D Android game with immersive interactions and engaging gameplay.</p>
+                        <p>3D Android game with immersive, physics-based interactions.</p>
                         <div class="project-tags">
-                            <span class="tag">Unity</span>
                             <span class="tag">3D</span>
                             <span class="tag">Android</span>
-                            <span class="tag">C#</span>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Playable ads: compact strip -->
+            <div class="playables-strip">
+                <div class="playables-text">
+                    <h3><i class="fas fa-bullhorn"></i> Also: Playable Ads</h3>
+                    <p>HTML5 playables built with Luna Playground for Unity Ads, AppLovin, Mintegral and Google.</p>
+                </div>
+                <div class="playables-icons">
+                    <a href="https://play.google.com/store/apps/details?id=com.zakg.scaryteacher.hellgame" target="_blank" rel="noopener" title="Scary Teacher 3D - 100M+ downloads"><img src="images/playables/scary-teacher-3d.png" alt="Scary Teacher 3D" loading="lazy"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.idle.home.design.makeover" target="_blank" rel="noopener" title="Idle Home Makeover - 10M+ downloads"><img src="images/playables/idle-home-makeover.png" alt="Idle Home Makeover" loading="lazy"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.genigames.going.up.cat.runner" target="_blank" rel="noopener" title="Going Up Cat Runner 3D - 500K+ downloads"><img src="images/playables/going-up-cat-runner.png" alt="Going Up Cat Runner 3D" loading="lazy"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.genigames.infinite.glide.rush" target="_blank" rel="noopener" title="Infinite Glide: Board Rush"><img src="images/playables/infinite-glide.png" alt="Infinite Glide: Board Rush" loading="lazy"></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- About + Experience -->
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <p class="eyebrow">About Me</p>
+                <h2 class="section-title left">Engineer first,<br>gamer always.</h2>
+                <p class="about-description">
+                    I'm a Senior Unity Developer based in Lahore, Pakistan. For 5+ years I've delivered games for clients
+                    across puzzle, strategy, runner and casual genres, taking them from rough prototypes to store-ready releases.
+                </p>
+                <p class="about-description">
+                    I care about code that stays easy to extend (SOLID, design patterns, Zenject), games that run smoothly on
+                    low-end devices, and integrating everything a live game needs: Firebase, AdMob, in-app purchases, REST APIs,
+                    social login, leaderboards and cloud save.
+                </p>
+                <div class="about-actions">
+                    <a href="Resume/Hammad_Munir_Resume.pdf" download class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="https://www.linkedin.com/in/hammad-munir-a84096164/" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <span class="timeline-date">Aug 2022 – Present</span>
+                    <h3>Software Engineer (Unity)</h3>
+                    <p class="timeline-org">Geni-Team Solutions, Lahore</p>
+                    <p>Deliver end-to-end client games and playable ads; architect reusable codebases and integrate backend services.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <span class="timeline-date">Mar 2021 – Jun 2022</span>
+                    <h3>Game Developer</h3>
+                    <p class="timeline-org">Argon Tech, Lahore</p>
+                    <p>Built performance-friendly game UI/UX, REST API integration and improved physics and gameplay mechanics.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <span class="timeline-date">2016 – 2020</span>
+                    <h3>BS Software Engineering</h3>
+                    <p class="timeline-org">Lahore Garrison University</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <p class="eyebrow">What I Do</p>
+            <h2 class="section-title">Skills &amp; Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-unity"></i></div>
+                    <h3>Gameplay Programming</h3>
+                    <p>Core mechanics, game loops, physics and level systems in 2D &amp; 3D.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Clean Architecture</h3>
+                    <p>SOLID, design patterns and Zenject DI for codebases that scale.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Cross-Platform</h3>
+                    <p>Builds for Android, iOS, WebGL and PC, ready for the stores.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-coins"></i></div>
+                    <h3>Monetization &amp; Backend</h3>
+                    <p>AdMob, IAP, Firebase, REST APIs, social login and cloud save.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3>Performance</h3>
+                    <p>Profiling and optimization for smooth play on low-end devices.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-object-group"></i></div>
+                    <h3>UI/UX &amp; Animation</h3>
+                    <p>Responsive game UI, menus and polished animations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Have a game or playable ad in mind? Let's build it together.</p>
-
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3>Email</h3>
-                            <a href="mailto:hammadmunir979@gmail.com">hammadmunir979@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <a href="https://www.linkedin.com/in/hammad-munir-a84096164/" target="_blank" rel="noopener">Connect with me</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Lahore, Pakistan</p>
+            <div class="contact-card">
+                <div class="contact-intro">
+                    <p class="eyebrow">Contact</p>
+                    <h2 class="section-title left">Have a game in mind?</h2>
+                    <p class="section-subtitle left">Tell me about it. I usually reply within a few hours.</p>
+                    <div class="contact-info">
+                        <a class="contact-item" href="mailto:hammadmunir979@gmail.com">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            <span><strong>Email</strong>hammadmunir979@gmail.com</span>
+                        </a>
+                        <a class="contact-item" href="https://www.linkedin.com/in/hammad-munir-a84096164/" target="_blank" rel="noopener">
+                            <span class="contact-icon"><i class="fab fa-linkedin"></i></span>
+                            <span><strong>LinkedIn</strong>Connect with me</span>
+                        </a>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span><strong>Location</strong>Lahore, Pakistan</span>
                         </div>
                     </div>
                 </div>
 
                 <form class="contact-form" id="contact-form">
-                    <div class="form-group">
+                    <div class="form-row">
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
                         <input type="email" id="email" name="email" placeholder="Your Email" required>
                     </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
                     <button type="submit" class="btn btn-primary">
                         <i class="fas fa-paper-plane"></i> Send Message
                     </button>
@@ -404,23 +320,17 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year">2026</span> Hammad Munir. All rights reserved.</p>
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Hammad Munir. Built with care in Lahore.</p>
             <div class="footer-social">
-                <a href="mailto:hammadmunir979@gmail.com" class="social-link" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/hammad-munir-a84096164/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/HammadMunir2397" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
+                <a href="mailto:hammadmunir979@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/hammad-munir-a84096164/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/HammadMunir2397" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Project Modals -->
+    <!-- Project Modal -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>

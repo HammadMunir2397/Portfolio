@@ -75,6 +75,7 @@ const modalBody = document.getElementById('modal-body');
 const projects = {
     project1: {
         title: 'Sequence Samba',
+        meta: { Role: 'Unity Developer', Platform: 'iOS & Android', Timeline: 'Jul 2025 – Jan 2026', Studio: 'Geni-Team Solutions' },
         description: 'A cross-platform 2D puzzle game for iOS and Android with multiple game modes, progressive difficulty and a real-time database backend.',
         features: [
             'Multiple puzzle game modes with progressive difficulty levels',
@@ -91,6 +92,7 @@ const projects = {
     },
     project2: {
         title: 'Cyera Endless',
+        meta: { Role: 'Unity Developer', Platform: 'WebGL', Timeline: 'Mar 2025 – Jun 2025', Studio: 'Geni-Team Solutions' },
         description: 'A browser-based endless runner built for WebGL, combining smooth, fast-paced gameplay with features that keep players competing and coming back.',
         features: [
             'Endless runner mechanics: avoid obstacles and chase the highest score',
@@ -106,6 +108,7 @@ const projects = {
     },
     project3: {
         title: 'Reel Adventure',
+        meta: { Role: 'Unity Developer', Platform: 'PC', Timeline: 'Jan 2023 – Mar 2025', Studio: 'Geni-Team Solutions' },
         description: 'A 2D auto-battler for PC with a stat-driven combat system, built on a scalable, maintainable architecture using SOLID principles and event-driven systems.',
         features: [
             'Auto-battle system where attacks are decided by player stats',
@@ -119,6 +122,7 @@ const projects = {
     },
     project4: {
         title: 'Save America',
+        meta: { Role: 'Unity Developer', Platform: 'Android' },
         description: 'An immersive 3D game for Android with realistic interactions and engaging gameplay.',
         features: [
             'Realistic physics-based interactions',
@@ -180,6 +184,8 @@ function openModal(projectId) {
             ${project.description}
         </p>
         
+        ${project.meta ? `<div class="cs-meta">${Object.entries(project.meta).map(([k, v]) => `<div><span>${k}</span><strong>${v}</strong></div>`).join("")}</div>` : ""}
+
         ${videoHTML}
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 1rem; margin-bottom: 2rem;">
@@ -190,7 +196,7 @@ function openModal(projectId) {
         </div>
         
         <div style="margin-bottom: 2rem;">
-            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Key Features</h3>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">What I Built</h3>
             <ul style="list-style: none; padding: 0;">
                 ${project.features.map(feature => `
                     <li style="padding: 0.5rem 0; color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem;">
@@ -414,3 +420,41 @@ window.addEventListener('load', () => {
 
 console.log('Portfolio website loaded successfully! 🚀');
 
+
+// ===== Cursor spotlight (desktop only) =====
+const spotlight = document.querySelector('.spotlight');
+const finePointer = window.matchMedia('(pointer: fine)').matches;
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (spotlight && finePointer) {
+    window.addEventListener('pointermove', (e) => {
+        spotlight.style.setProperty('--mx', `${e.clientX}px`);
+        spotlight.style.setProperty('--my', `${e.clientY}px`);
+    });
+}
+
+// ===== 3D tilt on project cards =====
+if (finePointer && !reduceMotion) {
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('pointermove', (e) => {
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5;
+            const y = (e.clientY - r.top) / r.height - 0.5;
+            card.style.transition = 'transform 0.1s ease, box-shadow 0.3s ease, border-color 0.3s ease';
+            card.style.transform = `perspective(900px) rotateX(${-y * 6}deg) rotateY(${x * 8}deg) translateY(-6px)`;
+        });
+        card.addEventListener('pointerleave', () => {
+            card.style.transition = 'transform 0.5s ease, box-shadow 0.3s ease, border-color 0.3s ease';
+            card.style.transform = '';
+        });
+    });
+}
+
+// Keyboard access for project cards
+document.querySelectorAll('.project-card').forEach(card => {
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+    });
+});

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <a href="#projects" class="skip-link">Skip to content</a>
+    <div class="spotlight" aria-hidden="true"></div>
     <div class="bg-decor" aria-hidden="true">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -67,6 +69,7 @@
                     <span>WebGL</span>
                     <span>PC</span>
                 </div>
+                <p class="now-building"><span class="now-label">Now</span> Building <strong>Fusion Puzzle</strong>, a word-connect puzzle game in Unity 6</p>
             </div>
 
             <div class="hero-showcase" aria-hidden="true">
@@ -221,6 +224,7 @@
                     <h3>Software Engineer (Unity)</h3>
                     <p class="timeline-org">Geni-Team Solutions, Lahore</p>
                     <p>Deliver end-to-end client games and playable ads; architect reusable codebases and integrate backend services.</p>
+                    <div class="timeline-tags"><span>Unity</span><span>C#</span><span>Zenject</span><span>Firebase</span><span>AdMob</span><span>Luna</span></div>
                 </div>
                 <div class="timeline-item">
                     <span class="timeline-dot"></span>
@@ -228,6 +232,7 @@
                     <h3>Game Developer</h3>
                     <p class="timeline-org">Argon Tech, Lahore</p>
                     <p>Built performance-friendly game UI/UX, REST API integration and improved physics and gameplay mechanics.</p>
+                    <div class="timeline-tags"><span>Unity</span><span>C#</span><span>UnityWebRequest</span><span>UI/UX</span></div>
                 </div>
                 <div class="timeline-item">
                     <span class="timeline-dot"></span>
@@ -239,38 +244,53 @@
         </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Skills (bento grid) -->
     <section id="skills" class="skills">
         <div class="container">
             <p class="eyebrow">What I Do</p>
             <h2 class="section-title">Skills &amp; Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
+            <div class="bento">
+                <div class="bento-card bento-code">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Clean Architecture</h3>
+                    <p>SOLID, design patterns and Zenject DI, so features keep shipping fast as the game grows.</p>
+                    <pre class="code-snippet" aria-hidden="true"><code><span class="k">public interface</span> <span class="t">IWordValidator</span>
+{
+    <span class="k">bool</span> <span class="f">IsValid</span>(<span class="k">string</span> word);
+}
+
+<span class="k">public class</span> <span class="t">GameController</span> : <span class="t">MonoBehaviour</span>
+{
+    [<span class="t">Inject</span>] <span class="t">IWordValidator</span> validator;
+}</code></pre>
+                </div>
+                <div class="bento-card">
                     <div class="skill-icon"><i class="fab fa-unity"></i></div>
                     <h3>Gameplay Programming</h3>
                     <p>Core mechanics, game loops, physics and level systems in 2D &amp; 3D.</p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>Clean Architecture</h3>
-                    <p>SOLID, design patterns and Zenject DI for codebases that scale.</p>
+                <div class="bento-card">
+                    <div class="skill-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3>Performance</h3>
+                    <p>Profiling and optimization for smooth play on low-end devices and browsers.</p>
                 </div>
-                <div class="skill-card">
+                <div class="bento-card bento-platforms">
                     <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
                     <h3>Cross-Platform</h3>
-                    <p>Builds for Android, iOS, WebGL and PC, ready for the stores.</p>
+                    <p>Store-ready builds for every major target.</p>
+                    <div class="platform-row">
+                        <span><i class="fab fa-android"></i> Android</span>
+                        <span><i class="fab fa-apple"></i> iOS</span>
+                        <span><i class="fab fa-html5"></i> WebGL</span>
+                        <span><i class="fab fa-windows"></i> PC</span>
+                    </div>
                 </div>
-                <div class="skill-card">
+                <div class="bento-card">
                     <div class="skill-icon"><i class="fas fa-coins"></i></div>
                     <h3>Monetization &amp; Backend</h3>
                     <p>AdMob, IAP, Firebase, REST APIs, social login and cloud save.</p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    <h3>Performance</h3>
-                    <p>Profiling and optimization for smooth play on low-end devices.</p>
-                </div>
-                <div class="skill-card">
+                <div class="bento-card">
                     <div class="skill-icon"><i class="fas fa-object-group"></i></div>
                     <h3>UI/UX &amp; Animation</h3>
                     <p>Responsive game UI, menus and polished animations.</p>
@@ -321,7 +341,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-inner">
-            <p>&copy; <span id="year">2026</span> Hammad Munir. Built with care in Lahore.</p>
+            <p>&copy; <span id="year">2026</span> Hammad Munir. Built with care.</p>
             <div class="footer-social">
                 <a href="mailto:hammadmunir979@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/hammad-munir-a84096164/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
